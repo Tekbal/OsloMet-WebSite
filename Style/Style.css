@@ -198,7 +198,176 @@ header label {
     color: #666; /* Set the text color to a lighter shade of gray */
     padding: 1rem; /* Add padding around the paragraphs */
 }
+.about .column {
+    display: flex; /* Use flexbox for layout within the .column class */
+    align-items: center; /* Vertically align items to the center */
+    justify-content: center; /* Horizontally align items to the center */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+}
 
+.about .column .image {
+    flex: 1 1 40rem; /* Set flexible sizing for the image column */
+}
+
+.about .column .image img {
+    width: 70%; /* Set the width of images within the image column to 70% of their container */
+}
+
+.about .column .content {
+    flex: 1 1 40rem; /* Set flexible sizing for the content column */
+}
+
+.about .column .content h3 {
+    font-size: 3rem; /* Set the font size for the heading within the content column */
+    color: #666; /* Set the text color to a shade of gray */
+}
+
+.about .column .content p {
+    font-size: 1.5rem; /* Set the font size for paragraphs within the content column */
+    color: #666; /* Set the text color to a shade of gray */
+    padding: 1rem 0; /* Add padding above and below paragraphs */
+}
+
+.about .column .content .buttons a:last-child {
+    margin-left: 2rem; /* Add left margin to the last link within the content column's buttons */
+}
+
+.contact {
+    display: flex; /* Use flexbox for layout within the .contact class */
+    align-items: center; /* Vertically align items to the center */
+    justify-content: center; /* Horizontally align items to the center */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+    padding: 4rem; /* Add padding around the .contact section */
+}
+
+.contact .image {
+    flex: 1 1 40rem; /* Set flexible sizing for the image column */
+}
+
+.contact .image img {
+    width: 70%; /* Set the width of images within the .image column to 70% */
+    padding: 2rem; /* Add padding around the images */
+}
+
+.contact form {
+    flex: 1 1 40rem; /* Set flexible sizing for the form column */
+    padding: 2rem 3rem; /* Add padding around the form */
+    border: .1rem solid rgba(0, 0, 0, 0.2); /* Add a border with slight transparency */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
+    border-radius: .5rem; /* Add rounded corners to the form */
+    background: #ffe6bf; /* Set the background color of the form */
+}
+
+.contact form .heading {
+    text-align: left; /* Left-align the text within the heading */
+    padding: 0; /* Remove padding from the heading */
+    padding-bottom: 2rem; /* Add bottom padding to the heading */
+}
+
+.contact form .inputBox {
+    position: relative; /* Set the position of the input boxes to relative */
+}
+
+.contact form .inputBox input, .contact form .inputBox textarea {
+    width: 100%; /* Set the width of input fields to 100% */
+    background: none; /* Set a transparent background for input fields */
+    color: #666; /* Set text color to a shade of gray */
+    margin: 1.5rem 0; /* Add margin above and below input fields */
+    padding: .5rem 0; /* Add padding to input fields */
+    font-size: 1.7rem; /* Set the font size for input fields */
+    border-bottom: 1rem solid rgba(0, 0, 0, 0.1); /* Add a bottom border with slight transparency */
+    text-transform: none; /* Keep the text in its original case */
+}
+
+.contact form .inputBox textarea {
+    resize: none; /* Disable text area resizing */
+    height: 13rem; /* Set the height of the text area */
+}
+
+.contact form .inputBox label {
+    position: absolute; /* Set the position of labels to absolute */
+    top: 1.7rem; /* Add top spacing for labels */
+    left: 0; /* Align labels to the left */
+    font-size: 1.7rem; /* Set the font size for labels */
+    color: #666; /* Set label text color to a shade of gray */
+    transition: .2s linear; /* Apply a smooth transition effect on label changes */
+}
+
+.contact form .inputBox input:focus ~ label,
+.contact form .inputBox input:valid ~ label,
+.contact form .inputBox textarea:focus ~ label,
+.contact form .inputBox textarea:valid ~ label {
+    top: -.5rem; /* Move the label up when input fields have focus or valid content */
+    font-size: 1.5rem; /* Reduce the font size of the label */
+    color: var(--orange); /* Change the label text color to a custom variable (orange) */
+}
+
+.footer {
+    padding-top: 3rem; /* Add top padding to the footer */
+}
+
+.footer .box-container {
+    display: flex; /* Use flexbox for layout within the .box-container class */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+}
+
+.footer .box-container .box {
+    flex: 1 1 25rem; /* Set flexible sizing for the boxes within the .box-container */
+    margin: 2rem; /* Add margin around the boxes */
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem; /* Set the font size for headings within the boxes */
+    padding: 1rem 0; /* Add padding above and below headings */
+    color: #ff9900; /* Set the text color to an orange shade */
+    text-decoration: underline; /* Underline the headings */
+    text-underline-offset: 1rem; /* Set the offset for the underline */
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem; /* Set the font size for paragraphs within the boxes */
+    padding: 5rem 0; /* Add substantial padding above and below paragraphs */
+    color: #ff9900; /* Set the text color to an orange shade */
+}
+
+.footer .box-container .box a {
+    display: block; /* Display links as blocks */
+    font-size: 1.5rem; /* Set the font size for links within the boxes */
+    padding: 5rem 0; /* Add substantial padding above and below links */
+    color: #ff9900; /* Set the text color to an orange shade */
+}
+
+.footer .box-container .box a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.footer .box-container .box .info {
+    display: flex; /* Use flexbox for layout within the .info class */
+    align-items: center; /* Vertically align items to the center */
+}
+
+.footer .box-container .box .info i {
+    margin: .5rem 0; /* Add margin above and below the icon */
+    margin-right: 1rem; /* Add right margin to the icon */
+    border-radius: 50%; /* Create a circular shape for the icon */
+    background: #ff9900; /* Set the background color of the icon to orange */
+    color: var(--orange); /* Set the text color of the icon using a custom variable */
+    font-size: 1.5rem; /* Set the font size of the icon */
+    height: 4.5rem; /* Set the height of the icon container */
+    width: 4.5rem; /* Set the width of the icon container */
+    line-height: 4.5rem; /* Vertically align text within the icon container */
+    text-align: center; /* Horizontally align text within the icon container */
+}
+
+.footer .credit {
+    font-size: 2rem; /* Set the font size for the footer credit text */
+    font-weight: normal; /* Set normal font weight */
+    letter-spacing: .1rem; /* Adjust letter spacing */
+    color: #fff; /* Set text color to white */
+    border-top: .1rem solid #fff5; /* Add a top border with a slight transparency */
+    padding: 2.5rem 1rem; /* Add padding around the credit text */
+    text-align: center; /* Center-align the credit text */
+}
 
 
 /* media queries */
@@ -264,11 +433,22 @@ header label {
   .home .content p {
     font-size: 1.5rem; /* Adjust font size for paragraphs */
   }
+  .about {
+    background-position: right; /* Set the background image position to the right */
 }
+
 @media (max-width: 450px) {
-  html {
-    font-size: 50%; /* Further adjust base font size for screens up to 450px width */
-  }
+    html {
+        font-size: 50%; /* Adjust the base font size for screens up to 450px width */
+    }
+    .about .column .content .buttons a {
+        width: 100%; /* Set the width of links to 100% */
+        text-align: center; /* Center-align the text in the links */
+    }
+    .about .column .content .buttons a:last-child {
+        margin: 1rem 0; /* Add margin to the last link for spacing */
+    }
+}
 }
 
 
