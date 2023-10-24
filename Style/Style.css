@@ -1,0 +1,274 @@
+/* Font Family link  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+
+/*  define CSS variables for colors and a gradient that can be used throughout the stylesheet. */
+:root {
+  --orange: #ff9900; /* Define a custom CSS variable for orange color */
+  /* Define a custom CSS variable for brown color */
+  --gradient: linear-gradient(
+    90deg,
+    var(--orange),
+    var(--brown)
+  ); /* Define a gradient using custom variables */
+}
+
+/*  sets default styles for various HTML elements and specifies that the 'Montserrat' font should be used as the default font. */
+* {
+  font-family: "Montserrat", sans-serif; /* Apply the 'Montserrat' font to all elements */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Box model includes padding and border in element dimensions */
+  text-decoration: none; /* Remove text decoration (e.g., underlines) */
+  outline: none; /* Remove outline on focus */
+  border: none; /* Remove borders */
+  text-transform: capitalize; /* Capitalize text */
+}
+
+/* appears to be trying to target all section elements with the pseudo-element selector "::section," which is not a valid selector. It sets a background color and text color for these sections. */
+*::section {
+  background: var(--brown); /* Set background color using the custom variable */
+  color: #fff; /* Set text color to white */
+}
+
+/*  sets the base font size for the HTML element and hides any overflow on the HTML element. */
+html {
+  font-size: 62.5%; /* Set the base font size to 62.5% for easier rem units calculation */
+  overflow: hidden; /* Hide horizontal overflow */
+}
+
+/*  sets the background color for the entire webpage body. */
+body {
+  background: #ffe6bf; /* Set the background color of the body */
+}
+
+/* styles all 'section' elements by setting a minimum height, padding, and top padding. */
+section {
+  min-height: 100vh; /* Set a minimum height of 100% viewport height */
+  padding: 0 9%; /* Set padding for the section */
+  padding-top: 7.5rem; /* Add top padding */
+}
+
+/* styles elements with the class 'btn' by specifying various properties like margin, padding, background, font size, and transitions for hover effects. */
+.btn {
+  display: inline-block; /* Display the button as an inline block */
+  margin-top: 1rem; /* Add top margin */
+  padding: 0.8rem 3rem; /* Set padding for the button */
+  border-radius: 5rem; /* Add rounded corners */
+  background: var(--gradient); /* Set background with the gradient */
+  font-size: 1.7rem; /* Set font size */
+  color: #fff; /* Set text color to white */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: all 0.3s linear; /* Apply a smooth transition effect on all properties */
+}
+
+/*  intended to apply a scale transform on hover, but it should be written as '.btn:hover' instead of 'btn:hover'. */
+btn:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+}
+
+.heading {
+    text-align: center; /* Center-align text */
+    background: var(--gradient); /* Set the background with a gradient using a custom variable */
+    -webkit-background-clip: text; /* Apply the background to the text using the Webkit-specific property */
+    background-clip: text; /* Apply the background to the text */
+    font-size: 3.5rem; /* Set the font size to 3.5rem */
+    text-transform: uppercase; /* Transform text to uppercase */
+    margin-top: 2rem;/* Adds a top margin of 2 rems (relative units) to the element */
+    padding: 2rem; /* Add 1rem of padding around the text */
+}
+
+/* styles the header element, which appears to be a fixed navigation bar. */
+header {
+  position: fixed; /* Fix the header to the top of the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffe6bf; /* Set background color */
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
+  padding: 2rem 9%; /* Set padding for the header */
+  display: flex; /* Display header as a flex container */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space between items */
+  z-index: 1000; /* Set z-index to control layering */
+}
+
+header .logo {
+  font-size: 5rem; /* Set font size for the logo */
+  color: var(--orange); /* Set color using custom variable */
+}
+
+header .logo span {
+  color: var(--brown); /* Set color for the logo's span using custom variable */
+}
+
+header .navbar a {
+  font-size: 3rem; /* Set font size for navbar links */
+  margin-left: 2rem; /* Add left margin between links */
+  color: var(--orange); /* Set link color using custom variable */
+}
+
+header .navbar a:hover {
+  color: var(--brown); /* Change link color on hover using custom variable */
+}
+
+header input {
+  display: none; /* Hide the input element */
+}
+
+header label {
+  font-size: 3rem; /* Set font size for the label */
+  color: var(--orange); /* Set label color using custom variable */
+  cursor: pointer; /* Change cursor to a pointer */
+  visibility: hidden; /* Hide label by default */
+  opacity: 0; /* Set label opacity to 0 */
+}
+
+.home {
+  display: flex; /* Display the 'home' section as a flex container */
+  align-items: center; /* Vertically align items */
+  justify-content: end; /* Align content to the end of the container */
+}
+.home .image img {
+  width: 40vw; /* Set width for the image */
+  animation: float 3s linear infinite; /* Apply 'float' animation */
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(
+      0rem
+    ); /* Define keyframes for the 'float' animation */
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 5.5rem; /* Set font size for the heading */
+  color: #333; /* Set text color */
+  text-transform: uppercase; /* Transform text to uppercase */
+}
+.home .content h3 span {
+  color: var(
+    --brown
+  ); /* Set color for the span within the heading using a custom variable */
+  text-transform: uppercase; /* Transform span text to uppercase */
+}
+
+.home .content p {
+  font-size: 1.7rem; /* Set font size for paragraphs */
+  color: #666; /* Set text color */
+  padding: 1rem 0; /* Add padding to paragraphs */
+}
+
+.study .box-container {
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Vertically align items to the center */
+    justify-content: center; /* Horizontally align items to the center */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+}
+
+.study .box-container .box {
+    flex: 1 1 30rem; /* Set flexible sizing for the boxes */
+    background: #FFCC80; /* Set the background color of the boxes */
+    border-radius: .5rem; /* Add rounded corners to the boxes */
+    border: .1rem solid rgba(0, 0, 0, 0.2); /* Add a border with a slight transparency */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
+    margin: 1.5rem; /* Add margin around the boxes for spacing */
+    padding: 3rem 2rem; /* Add padding inside the boxes */
+    border-radius: .5rem; /* (Duplicate) Add rounded corners to the boxes */
+    text-align: center; /* Center-align the text within the boxes */
+}
+
+.study .box-container .box img {
+    height: 25rem; /* Set the height of images inside the boxes */
+}
+
+.study .box-container .box h3 {
+    font-size: 2rem; /* Set the font size for the heading within the boxes */
+    color: #333; /* Set the text color to a shade of gray */
+    padding-top: 1rem; /* Add padding above the heading */
+}
+
+.study .box-container .box p {
+    font-size: 2rem; /* Set the font size for paragraphs within the boxes */
+    color: #666; /* Set the text color to a lighter shade of gray */
+    padding: 1rem; /* Add padding around the paragraphs */
+}
+
+
+
+/* media queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%; /* Adjust base font size for screens up to 1200px width */
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 0 3%; /* Adjust padding for screens up to 991px width */
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header label {
+    visibility: visible; /* Make label visible at smaller screens */
+    opacity: 1; /* Set label opacity to 1 */
+  }
+
+  header .navbar {
+    position: absolute; /* Position navbar absolutely */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff; /* Set background color for the navbar */
+    padding: 1rem 2rem; /* Add padding */
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a top border */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transform-origin: top; /* Set transform origin to the top */
+    transform: scaleY(0); /* Initially scale it to 0 height */
+    opacity: 0; /* Initially hide it*/
+    transition: 0.2s linear; /* Apply a smooth transition effect */
+  }
+
+  header .navbar a {
+    display: block; /* Display navbar links as blocks */
+    margin: 2rem 0; /* Add margin between links */
+    font-size: 2rem; /* Set font size for links */
+  }
+
+  header input:checked ~ .navbar {
+    /* Show navbar when the input is checked (usually a mobile menu toggle) */
+    transform: scaleY(1); /* Scale the navbar to full height */
+    opacity: 1; /* Make it visible */
+  }
+
+  header input:checked ~ label::before {
+    content: "\f00d"; /* Display a checkmark icon when the input is checked */
+  }
+
+  .home {
+    flex-flow: column-reverse; /* Reverse the order of flex items at smaller screens */
+  }
+  .home .image img {
+    width: 100%; /* Set image width to 100% for smaller screens */
+  }
+  .home .content h3 {
+    font-size: 3.6rem; /* Adjust font size for headings */
+  }
+  .home .content p {
+    font-size: 1.5rem; /* Adjust font size for paragraphs */
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%; /* Further adjust base font size for screens up to 450px width */
+  }
+}
+
+
