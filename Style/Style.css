@@ -57,7 +57,7 @@ section {
   border-radius: 5rem; /* Add rounded corners */
   background: var(--gradient); /* Set background with the gradient */
   font-size: 1.7rem; /* Set font size */
-  color: #B37D00; /* Set text color to white */
+  color: #fff; /* Set text color to white */
   cursor: pointer; /* Change cursor to a pointer on hover */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
   transition: all 0.3s linear; /* Apply a smooth transition effect on all properties */
@@ -222,6 +222,10 @@ header label {
 .about .column .content {
   flex: 1 1 40rem; /* Set flexible sizing for the content column */
 }
+.about .column .content .buttons .btn {
+  background:#ffcc80 ; 
+}
+
 
 .about .column .content h3 {
   font-size: 3rem; /* Set the font size for the heading within the content column */
