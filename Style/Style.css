@@ -204,6 +204,22 @@ header label {
   color: #666; /* Set the text color to a lighter shade of gray */
   padding: 1rem; /* Add padding around the paragraphs */
 }
+
+.campus .box-container .box {
+  flex: 1 1 30rem; /* Set flexible sizing for the boxes */
+  background: #ffcc80; /* Set the background color of the boxes */
+  border-radius: 0.5rem; /* Add rounded corners to the boxes */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a border with a slight transparency */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
+  margin: 1rem; /* Add margin around the boxes for spacing */
+  padding: 3rem 2rem; /* Add padding inside the boxes */
+  border-radius: 0.5rem; /* (Duplicate) Add rounded corners to the boxes */
+  text-align: center; /* Center-align the text within the boxes */
+}
+
+.campus .box-container .box img {
+  height: 25rem; /* Set the height of images inside the boxes */
+}
 .about .column {
   display: flex; /* Use flexbox for layout within the .column class */
   align-items: center; /* Vertically align items to the center */
