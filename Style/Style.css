@@ -1,481 +1,519 @@
-/* Font Family link  */
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
 
-/*  define CSS variables for colors and a gradient that can be used throughout the stylesheet. */
+/* Global variables */
 :root {
-  --orange: #ff9900; /* Define a custom CSS variable for orange color */
-  /* Define a custom CSS variable for brown color */
-  --gradient: linear-gradient(
-    90deg,
-    var(--orange),
-    var(--brown)
-  ); /* Define a gradient using custom variables */
+  --orange: #ff9900;
+  --gradient: linear-gradient(90deg, var(--orange), var(--brown));
 }
 
-/*  sets default styles for various HTML elements and specifies that the 'Montserrat' font should be used as the default font. */
+/* Resetting default styles */
 * {
-  font-family: "Montserrat", sans-serif; /* Apply the 'Montserrat' font to all elements */
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
-  box-sizing: border-box; /* Box model includes padding and border in element dimensions */
-  text-decoration: none; /* Remove text decoration (e.g., underlines) */
-  outline: none; /* Remove outline on focus */
-  border: none; /* Remove borders */
-  text-transform: capitalize; /* Capitalize text */
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
 }
 
-/* appears to be trying to target all section elements with the pseudo-element selector "::section," which is not a valid selector. It sets a background color and text color for these sections. */
+/* Section styles */
 *::section {
-  background: var(--brown); /* Set background color using the custom variable */
-  color: #fff; /* Set text color to white */
+  background: var(--brown);
+  color: #fff;
 }
 
-/*  sets the base font size for the HTML element and hides any overflow on the HTML element. */
+/* Global HTML styles */
 html {
-  font-size: 62.5%; /* Set the base font size to 62.5% for easier rem units calculation */
-  overflow: auto; /* Hide horizontal overflow */
+  font-size: 62.5%;
+  overflow: auto;
   scroll-behavior: smooth;
 }
 
-/*  sets the background color for the entire webpage body. */
+/* Body styles */
 body {
-  background: #ffe6bf; /* Set the background color of the body */
+  background: #ffe6bf;
 }
 
-/* styles all 'section' elements by setting a minimum height, padding, and top padding. */
+/* Section styles */
 section {
-  min-height: 100vh; /* Set a minimum height of 100% viewport height */
-  padding: 0 9%; /* Set padding for the section */
-  padding-top: 7.5rem; /* Add top padding */
+  min-height: 100vh;
+  padding: 0 9%;
+  padding-top: 7.5rem;
 }
 
-/* styles elements with the class 'btn' by specifying various properties like margin, padding, background, font size, and transitions for hover effects. */
+/* Button styles */
 .btn {
-  display: inline-block; /* Display the button as an inline block */
-  margin-top: 1rem; /* Add top margin */
-  padding: 0.8rem 3rem; /* Set padding for the button */
-  border-radius: 5rem; /* Add rounded corners */
-  background: var(--gradient); /* Set background with the gradient */
-  font-size: 1.7rem; /* Set font size */
-  color: #B37D00; /* Set text color to white */
-  cursor: pointer; /* Change cursor to a pointer on hover */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
-  transition: all 0.3s linear; /* Apply a smooth transition effect on all properties */
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background: var(--gradient);
+  font-size: 1.7rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
 }
 
-/*  intended to apply a scale transform on hover, but it should be written as '.btn:hover' instead of 'btn:hover'. */
+/* Button hover effect */
 btn:hover {
-  transform: scale(1.1); /* Scale the button on hover */
+  transform: scale(1.1);
 }
 
+/* Heading styles */
 .heading {
-  text-align: center; /* Center-align text */
-  background: var(
-    --gradient
-  ); /* Set the background with a gradient using a custom variable */
-  -webkit-background-clip: text; /* Apply the background to the text using the Webkit-specific property */
-  background-clip: text; /* Apply the background to the text */
-  font-size: 3.5rem; /* Set the font size to 3.5rem */
-  text-transform: uppercase; /* Transform text to uppercase */
-  margin-top: 2rem; /* Adds a top margin of 2 rems (relative units) to the element */
-  padding: 2rem; /* Add 1rem of padding around the text */
+  text-align: center;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  padding: 2rem;
 }
 
-/* styles the header element, which appears to be a fixed navigation bar. */
+/* Header styles */
 header {
-  position: fixed; /* Fix the header to the top of the viewport */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #ffe6bf; /* Set background color */
-  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
-  padding: 2rem 9%; /* Set padding for the header */
-  display: flex; /* Display header as a flex container */
-  align-items: center; /* Vertically align items */
-  justify-content: space-between; /* Space between items */
-  z-index: 1000; /* Set z-index to control layering */
+  background: #ffe6bf;
+  box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
+/* Logo styles */
 header .logo {
-  font-size: 5rem; /* Set font size for the logo */
-  color: var(--orange); /* Set color using custom variable */
+  font-size: 5rem;
+  color: var(--orange);
 }
 
+/* Logo span styles */
 header .logo span {
-  color: var(--brown); /* Set color for the logo's span using custom variable */
+  color: var(--brown);
 }
 
+/* Navbar link styles */
 header .navbar a {
-  font-size: 3rem; /* Set font size for navbar links */
-  margin-left: 2rem; /* Add left margin between links */
-  color: var(--orange); /* Set link color using custom variable */
+  font-size: 3rem;
+  margin-left: 2rem;
+  color: var(--orange);
 }
 
+/* Navbar link hover styles */
 header .navbar a:hover {
-  color: var(--brown); /* Change link color on hover using custom variable */
+  color: var(--brown);
 }
 
+/* Header input styles */
 header input {
-  display: none; /* Hide the input element */
+  display: none;
 }
 
+/* Header label styles */
 header label {
-  font-size: 3rem; /* Set font size for the label */
-  color: var(--orange); /* Set label color using custom variable */
-  cursor: pointer; /* Change cursor to a pointer */
-  visibility: hidden; /* Hide label by default */
-  opacity: 0; /* Set label opacity to 0 */
+  font-size: 3rem;
+  color: var(--orange);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
 }
 
+/* Home section styles */
 .home {
-  display: flex; /* Display the 'home' section as a flex container */
-  align-items: center; /* Vertically align items */
-  justify-content: end; /* Align content to the end of the container */
-}
-.home .image img {
-  width: 40vw; /* Set width for the image */
-  animation: float 3s linear infinite; /* Apply 'float' animation */
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
+/* Home image styles */
+.home .image img {
+  width: 40vw;
+  animation: float 3s linear infinite;
+}
+
+/* Keyframes for floating effect */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(
-      0rem
-    ); /* Define keyframes for the 'float' animation */
+  0%, 100% {
+    transform: translateY(0rem);
   }
   50% {
     transform: translateY(-3.5rem);
   }
 }
 
+/* Home content heading styles */
 .home .content h3 {
-  font-size: 5.5rem; /* Set font size for the heading */
-  color: #333; /* Set text color */
-  text-transform: uppercase; /* Transform text to uppercase */
+  font-size: 5.5rem;
+  color: #333;
+  text-transform: uppercase;
 }
+
+/* Home content heading span styles */
 .home .content h3 span {
-  color: var(
-    --brown
-  ); /* Set color for the span within the heading using a custom variable */
-  text-transform: uppercase; /* Transform span text to uppercase */
+  color: var(--brown);
+  text-transform: uppercase;
 }
 
+/* Home content paragraph styles */
 .home .content p {
-  font-size: 1.7rem; /* Set font size for paragraphs */
-  color: #666; /* Set text color */
-  padding: 1rem 0; /* Add padding to paragraphs */
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
 }
 
+/* Study section box container styles */
 .study .box-container {
-  display: flex; /* Make the container a flex container */
-  align-items: center; /* Vertically align items to the center */
-  justify-content: center; /* Horizontally align items to the center */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.home .content .btn{
+
+/* Home content button styles */
+.home .content .btn {
   background: #ffcc80;
 }
 
+/* Study section box styles */
 .study .box-container .box {
-  flex: 1 1 30rem; /* Set flexible sizing for the boxes */
-  background: #ffcc80; /* Set the background color of the boxes */
-  border-radius: 0.5rem; /* Add rounded corners to the boxes */
-  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a border with a slight transparency */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
-  margin: 1.5rem; /* Add margin around the boxes for spacing */
-  padding: 3rem 2rem; /* Add padding inside the boxes */
-  border-radius: 0.5rem; /* (Duplicate) Add rounded corners to the boxes */
-  text-align: center; /* Center-align the text within the boxes */
+  flex: 1 1 30rem;
+  background: #ffcc80;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
+/* Study section box image styles */
 .study .box-container .box img {
-  height: 25rem; /* Set the height of images inside the boxes */
+  height: 25rem;
 }
 
+/* Study section box heading styles */
 .study .box-container .box h3 {
-  font-size: 2rem; /* Set the font size for the heading within the boxes */
-  color: #333; /* Set the text color to a shade of gray */
-  padding-top: 1rem; /* Add padding above the heading */
+  font-size: 2rem;
+  color: #333;
+  padding-top: 1rem;
 }
 
+/* Study section box paragraph styles */
 .study .box-container .box p {
-  font-size: 1.5rem; /* Set the font size for paragraphs within the boxes */
-  color: #666; /* Set the text color to a lighter shade of gray */
-  padding: 1rem; /* Add padding around the paragraphs */
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem;
 }
 
-.campus .box-container .box {
-  flex: 1 1 30rem; /* Set flexible sizing for the boxes */
-  background: #ffcc80; /* Set the background color of the boxes */
-  border-radius: 0.5rem; /* Add rounded corners to the boxes */
-  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a border with a slight transparency */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
-  margin: 1rem; /* Add margin around the boxes for spacing */
-  padding: 3rem 2rem; /* Add padding inside the boxes */
-  border-radius: 0.5rem; /* (Duplicate) Add rounded corners to the boxes */
-  text-align: center; /* Center-align the text within the boxes */
-}
-
-.campus .box-container .box img {
-  height: 25rem; /* Set the height of images inside the boxes */
-}
+/* About section column styles */
 .about .column {
-  display: flex; /* Use flexbox for layout within the .column class */
-  align-items: center; /* Vertically align items to the center */
-  justify-content: center; /* Horizontally align items to the center */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* About section column image styles */
 .about .column .image {
-  flex: 1 1 40rem; /* Set flexible sizing for the image column */
+  flex: 1 1 40rem;
 }
 
+/* About section column image inner image styles */
 .about .column .image img {
-  width: 70%; /* Set the width of images within the image column to 70% of their container */
+  width: 70%;
 }
 
+/* About section column content styles */
 .about .column .content {
-  flex: 1 1 40rem; /* Set flexible sizing for the content column */
+  flex: 1 1 40rem;
 }
 
-.about .column .content h3 {
-  font-size: 3rem; /* Set the font size for the heading within the content column */
-  color: #666; /* Set the text color to a shade of gray */
-}
-
-.about .column .content p {
-  font-size: 1.5rem; /* Set the font size for paragraphs within the content column */
-  color: #666; /* Set the text color to a shade of gray */
-  padding: 1rem 0; /* Add padding above and below paragraphs */
-}
-
-.about .column .content .buttons a:last-child {
-  margin-left: 2rem; /* Add left margin to the last link within the content column's buttons */
-}
-
-.contact {
-  display: flex; /* Use flexbox for layout within the .contact class */
-  align-items: center; /* Vertically align items to the center */
-  justify-content: center; /* Horizontally align items to the center */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
-  padding: 4rem; /* Add padding around the .contact section */
-}
-
-.contact .image {
-  flex: 1 1 40rem; /* Set flexible sizing for the image column */
-}
-
-.contact .image img {
-  width: 70%; /* Set the width of images within the .image column to 70% */
-  padding: 2rem; /* Add padding around the images */
-}
-
-.contact form {
-  flex: 1 1 40rem; /* Set flexible sizing for the form column */
-  padding: 2rem 3rem; /* Add padding around the form */
-  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a border with slight transparency */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle lift effect */
-  border-radius: 0.5rem; /* Add rounded corners to the form */
-  background: #ffe6bf; /* Set the background color of the form */
-}
-.contact form .btn{
+/* About section column content buttons button styles */
+.about .column .content .buttons .btn {
   background: #ffcc80;
 }
 
+/* About section column content heading styles */
+.about .column .content h3 {
+  font-size: 3rem;
+  color: #666;
+}
+
+/* About section column content paragraph styles */
+.about .column .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+/* About section column content buttons last child link styles */
+.about .column .content .buttons a:last-child {
+  margin-left: 2rem;
+}
+
+/* Contact section styles */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+
+/* Contact section image styles */
+.contact .image {
+  flex: 1 1 40rem;
+}
+
+/* Contact section image inner image styles */
+.contact .image img {
+  width: 70%;
+  padding: 2rem;
+}
+
+/* Contact section form styles */
+.contact form {
+  flex: 1 1 40rem;
+  padding: 2rem 3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #ffe6bf;
+}
+
+/* Contact section form button styles */
+.contact form .btn {
+  background: #ffcc80;
+}
+
+/* Contact section form heading styles */
 .contact form .heading {
-  text-align: left; /* Left-align the text within the heading */
-  padding: 0; /* Remove padding from the heading */
-  padding-bottom: 2rem; /* Add bottom padding to the heading */
+  text-align: left;
+  padding: 0;
+  padding-bottom: 2rem;
 }
 
+/* Contact section form input box styles */
 .contact form .inputBox {
-  position: relative; /* Set the position of the input boxes to relative */
+  position: relative;
 }
 
+/* Contact section form input and textarea styles */
 .contact form .inputBox input,
 .contact form .inputBox textarea {
-  width: 100%; /* Set the width of input fields to 100% */
-  background: none; /* Set a transparent background for input fields */
-  color: #666; /* Set text color to a shade of gray */
-  margin: 1.5rem 0; /* Add margin above and below input fields */
-  padding: 0.5rem 0; /* Add padding to input fields */
-  font-size: 1.7rem; /* Set the font size for input fields */
-  border-bottom: 1rem solid rgba(0, 0, 0, 0.1); /* Add a bottom border with slight transparency */
-  text-transform: none; /* Keep the text in its original case */
+  width: 100%;
+  background: none;
+  color: #666;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  border-bottom: 1rem solid rgba(0, 0, 0, 0.1);
+  text-transform: none;
 }
 
+/* Contact section form textarea styles */
 .contact form .inputBox textarea {
-  resize: none; /* Disable text area resizing */
-  height: 13rem; /* Set the height of the text area */
+  resize: none;
+  height: 13rem;
 }
 
+/* Contact section form input label styles */
 .contact form .inputBox label {
-  position: absolute; /* Set the position of labels to absolute */
-  top: 1.7rem; /* Add top spacing for labels */
-  left: 0; /* Align labels to the left */
-  font-size: 1.7rem; /* Set the font size for labels */
-  color: #666; /* Set label text color to a shade of gray */
-  transition: 0.2s linear; /* Apply a smooth transition effect on label changes */
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  font-size: 1.7rem;
+  color: #666;
+  transition: 0.2s linear;
 }
 
+/* Contact section form input label focus styles */
 .contact form .inputBox input:focus ~ label,
 .contact form .inputBox input:valid ~ label,
 .contact form .inputBox textarea:focus ~ label,
 .contact form .inputBox textarea:valid ~ label {
-  top: -0.5rem; /* Move the label up when input fields have focus or valid content */
-  font-size: 1.5rem; /* Reduce the font size of the label */
-  color: var(
-    --orange
-  ); /* Change the label text color to a custom variable (orange) */
+  top: -0.5rem;
+  font-size: 1.5rem;
+  color: var(--orange);
 }
 
+/* Footer styles */
 .footer {
-  padding-top: 3rem; /* Add top padding to the footer */
+  padding-top: 3rem;
 }
 
+/* Footer box container styles */
 .footer .box-container {
-  display: flex; /* Use flexbox for layout within the .box-container class */
-  flex-wrap: wrap; /* Allow flex items to wrap to the next line if necessary */
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/* Footer box styles */
 .footer .box-container .box {
-  flex: 1 1 25rem; /* Set flexible sizing for the boxes within the .box-container */
-  margin: 2rem; /* Add margin around the boxes */
+  flex: 1 1 25rem;
+  margin: 2rem;
 }
 
+/* Footer box heading styles */
 .footer .box-container .box h3 {
-  font-size: 2.5rem; /* Set the font size for headings within the boxes */
-  padding: 1rem 0; /* Add padding above and below headings */
-  color: #ff9900; /* Set the text color to an orange shade */
-  text-decoration: underline; /* Underline the headings */
-  text-underline-offset: 1rem; /* Set the offset for the underline */
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: #ff9900;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
 }
 
+/* Footer box paragraph styles */
 .footer .box-container .box p {
-  font-size: 1.5rem; /* Set the font size for paragraphs within the boxes */
-  padding:2rem 0; /* Add substantial padding above and below paragraphs */
-  color: #ff9900; /* Set the text color to an orange shade */
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  color: #ff9900;
 }
 
+/* Footer box link styles */
 .footer .box-container .box a {
-  display: block; /* Display links as blocks */
-  font-size: 1.5rem; /* Set the font size for links within the boxes */
-  padding: 1rem 0; /* Add substantial padding above and below links */
-  color: #ff9900; /* Set the text color to an orange shade */
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #ff9900;
 }
 
+/* Footer box link hover styles */
 .footer .box-container .box a:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: underline;
 }
 
+/* Footer box info styles */
 .footer .box-container .box .info {
-  display: flex; /* Use flexbox for layout within the .info class */
-  align-items: center; /* Vertically align items to the center */
+  display: flex;
+  align-items: center;
 }
 
+/* Footer box info icon styles */
 .footer .box-container .box .info i {
-  margin: 0.5rem 0; /* Add margin above and below the icon */
-  margin-right: 1rem; /* Add right margin to the icon */
-  border-radius: 50%; /* Create a circular shape for the icon */
-  background: #ffcc80; /* Set the background color of the icon to orange */
-  color: var(
-    --orange
-  ); /* Set the text color of the icon using a custom variable */
-  font-size: 1.5rem; /* Set the font size of the icon */
-  height: 4.5rem; /* Set the height of the icon container */
-  width: 4.5rem; /* Set the width of the icon container */
-  line-height: 4.5rem; /* Vertically align text within the icon container */
-  text-align: center; /* Horizontally align text within the icon container */
+  margin: 0.5rem 0;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background: #ffcc80;
+  color: var(--orange);
+  font-size: 1.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
 }
 
+/* Footer credit styles */
 .footer .credit {
-  font-size: 2rem; /* Set the font size for the footer credit text */
-  font-weight: normal; /* Set normal font weight */
-  letter-spacing: 0.1rem; /* Adjust letter spacing */
-  color: #333; /* Set text color to white */
-  border-top: 0.1rem solid #fff5; /* Add a top border with a slight transparency */
-  padding: 2.5rem 1rem; /* Add padding around the credit text */
-  text-align: center; /* Center-align the credit text */
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  color: #333;
+  border-top: 0.1rem solid #fff5;
+  padding: 2.5rem 1rem;
+  text-align: center;
 }
 
-/* media queries */
+/* Media queries for responsive design */
 @media (max-width: 1200px) {
   html {
-    font-size: 55%; /* Adjust base font size for screens up to 1200px width */
+    font-size: 55%;
   }
 }
 
 @media (max-width: 991px) {
   section {
-    padding: 0 3%; /* Adjust padding for screens up to 991px width */
+    padding: 0 3%;
     padding-top: 7.5rem;
   }
 }
 
 @media (max-width: 768px) {
+  /* Responsive header label styles */
   header label {
-    visibility: visible; /* Make label visible at smaller screens */
-    opacity: 1; /* Set label opacity to 1 */
+    visibility: visible;
+    opacity: 1;
   }
 
+  /* Responsive header navbar styles */
   header .navbar {
-    position: absolute; /* Position navbar absolutely */
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #fff; /* Set background color for the navbar */
-    padding: 1rem 2rem; /* Add padding */
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2); /* Add a top border */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
-    transform-origin: top; /* Set transform origin to the top */
-    transform: scaleY(0); /* Initially scale it to 0 height */
-    opacity: 0; /* Initially hide it*/
-    transition: 0.2s linear; /* Apply a smooth transition effect */
+    background: #fff;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.2s linear;
+    font-size: medium;
   }
 
+  /* Responsive header navbar link styles */
   header .navbar a {
-    display: block; /* Display navbar links as blocks */
-    margin: 2rem 0; /* Add margin between links */
-    font-size: 2rem; /* Set font size for links */
+    display: block;
+    margin: 1rem 0;
+    font-size: 10px;
   }
 
+  /* Responsive header input checked styles */
   header input:checked ~ .navbar {
-    /* Show navbar when the input is checked (usually a mobile menu toggle) */
-    transform: scaleY(1); /* Scale the navbar to full height */
-    opacity: 1; /* Make it visible */
+    transform: scaleY(1);
+    opacity: 1;
   }
 
+  /* Responsive header input checked label styles */
   header input:checked ~ label::before {
-    content: "\f00d"; /* Display a checkmark icon when the input is checked */
+    content: "\f00d";
   }
 
+  /* Responsive home section styles */
   .home {
-    flex-flow: column-reverse; /* Reverse the order of flex items at smaller screens */
+    flex-flow: column-reverse;
   }
+  /* Responsive home image styles */
   .home .image img {
-    width: 100%; /* Set image width to 100% for smaller screens */
+    width: 100%;
   }
+  /* Responsive home content heading styles */
   .home .content h3 {
-    font-size: 3.6rem; /* Adjust font size for headings */
+    font-size: 3.6rem;
   }
+  /* Responsive home content paragraph styles */
   .home .content p {
-    font-size: 1.5rem; /* Adjust font size for paragraphs */
+    font-size: 1.5rem;
   }
+  /* Responsive about section background position */
   .about {
-    background-position: right; /* Set the background image position to the right */
+    background-position: right;
   }
+}
 
-  @media (max-width: 450px) {
-    html {
-      font-size: 50%; /* Adjust the base font size for screens up to 450px width */
-    }
-    .about .column .content .buttons a {
-      width: 100%; /* Set the width of links to 100% */
-      text-align: center; /* Center-align the text in the links */
-    }
-    .about .column .content .buttons a:last-child {
-      margin: 1rem 0; /* Add margin to the last link for spacing */
-    }
+/* Additional media query for smaller devices */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  /* Responsive about section column content buttons link styles */
+  .about .column .content .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  /* Responsive about section column content buttons last child link margin styles */
+  .about .column .content .buttons a:last-child {
+    margin: 1rem 0;
   }
 }
