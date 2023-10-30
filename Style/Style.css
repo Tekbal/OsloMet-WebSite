@@ -215,12 +215,34 @@ header label {
   padding: 1rem;
 }
 
+/* Styles for the box container in the campus section */
+.campus .box-container .box {
+  flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+}
+
+/* Styling for the image inside the box in the campus section */
+.campus .box-container .box img {
+  height: 25rem; /* Setting the height for the image within the box */
+}
+
+.about h1{
+  margin-top: 12rem;
+}
 /* About section column styles */
 .about .column {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 /* About section column image styles */
@@ -231,6 +253,8 @@ header label {
 /* About section column image inner image styles */
 .about .column .image img {
   width: 70%;
+  margin-top: 5rem;
+  margin-left: 8rem;
 }
 
 /* About section column content styles */
@@ -268,6 +292,7 @@ header label {
   justify-content: center;
   flex-wrap: wrap;
   padding: 4rem;
+  margin-top: 6rem;
 }
 
 /* Contact section image styles */
@@ -279,6 +304,7 @@ header label {
 .contact .image img {
   width: 70%;
   padding: 2rem;
+  margin-top: 5rem;
 }
 
 /* Contact section form styles */
