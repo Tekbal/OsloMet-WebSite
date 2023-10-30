@@ -46,6 +46,7 @@ section {
 
 /* Button styles */
 .btn {
+<<<<<<< HEAD
   display: inline-block;
   margin-top: 1rem;
   padding: 0.8rem 3rem;
@@ -56,6 +57,18 @@ section {
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
+=======
+  display: inline-block; /* Display the button as an inline block */
+  margin-top: 1rem; /* Add top margin */
+  padding: 0.8rem 3rem; /* Set padding for the button */
+  border-radius: 5rem; /* Add rounded corners */
+  background: var(--gradient); /* Set background with the gradient */
+  font-size: 1.7rem; /* Set font size */
+  color: #fff; /* Set text color to white */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: all 0.3s linear; /* Apply a smooth transition effect on all properties */
+>>>>>>> 80ec296af861c69503d21ebeb9755cf6fafbf1d5
 }
 
 /* Button hover effect */
@@ -261,6 +274,10 @@ header label {
 .about .column .content {
   flex: 1 1 40rem;
 }
+.about .column .content .buttons .btn {
+  background:#ffcc80 ; 
+}
+
 
 /* About section column content buttons button styles */
 .about .column .content .buttons .btn {
