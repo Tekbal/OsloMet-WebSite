@@ -72,7 +72,7 @@ btn:hover {
   background-clip: text;
   font-size: 3.5rem;
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 15rem;
   padding: 2rem;
 }
 
@@ -216,6 +216,68 @@ header label {
   padding: 1rem;
 }
 
+.access .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* Styles for the box container in the access section */
+.access .box-container .box {
+  flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+  font-size: 1.6rem;
+  text-align:justify;
+  
+}
+
+/* Styling for the image inside the box in the access section */
+.access .box-container .box img {
+  height: 50%;
+  float: left;
+  border-radius: 1rem;
+  padding: 2rem ;
+}
+
+.topical .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Styles for the box container in the topical section */
+.topical .box-container .box {
+ flex: 1 1 30rem; /* Flexible box sizing for the container */
+  background: #ffcc80; /* Background color for the box */
+  border-radius: 0.5rem; /* Rounded corners for the box */
+  border: 0.1rem solid rgba(0, 0, 0, 0.2); /* Border style for the box */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Shadow effect for the box */
+  margin: 1rem; /* Spacing outside the box */
+  padding: 3rem 2rem; /* Spacing within the box */
+  border-radius: 0.5rem; /* Additional border radius for the box */
+  text-align: center; /* Aligning the text content within the box */
+}
+.topical .box-container .box p{
+  font-size: 1.6rem;
+  text-align:justify;
+  margin-top: 2rem;
+}
+/* Styling for the image inside the box in the topical section */
+.topical .box-container .box img {
+  width: 40%; 
+  float: left;
+  border-radius: 1rem;
+  padding: 2rem ;
+}
+
 /* Styles for the box container in the campus section */
 .campus .box-container .box {
   flex: 1 1 30rem; /* Flexible box sizing for the container */
@@ -227,6 +289,7 @@ header label {
   padding: 3rem 2rem; /* Spacing within the box */
   border-radius: 0.5rem; /* Additional border radius for the box */
   text-align: center; /* Aligning the text content within the box */
+  
 }
 
 /* Styling for the image inside the box in the campus section */
