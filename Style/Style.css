@@ -94,24 +94,29 @@ header {
 /* Logo styles */
 header .logo {
   font-size: 5rem;
+  color: black;
+}
+header .logo:hover{
   color: var(--orange);
 }
-
 /* Logo span styles */
 header .logo span {
-  color: var(--brown);
+  color: black;
+}
+header span:hover{
+  color: var(--orange);
 }
 
 /* Navbar link styles */
 header .navbar a {
-  font-size: 3rem;
+  font-size: 2rem;
   margin-left: 2rem;
-  color: var(--orange);
+  color: black;
 }
 
 /* Navbar link hover styles */
 header .navbar a:hover {
-  color: var(--brown);
+  color: var(--orange);
 }
 
 /* Header input styles */
@@ -121,7 +126,7 @@ header input {
 
 /* Header label styles */
 header label {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--orange);
   cursor: pointer;
   visibility: hidden;
