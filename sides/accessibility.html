@@ -35,68 +35,69 @@
         <h1 class="heading">Accessibility</h1>
         <div class="box-container">
             <div class="box">
-                <img src="../Code check/index code check.png" alt="" />
+                <img src="../img/accessibility.png" alt="" />
                 <p>
-                    Hello, I will try to write an article about how this site works and how you tested your codes. I
-                    hope
-                    you like it.
-
-                    This site, <a href="https://validator.w3.org/">W3C Validator</a>, is a standard validation tool provided by W3C, the organization that sets
-                    the
-                    web standards on the internet. W3C was founded in 1994 by Tim Berners-Lee and publishes various
-                    rules
-                    and recommendations to ensure the development and compatibility of the web. Web sites that are coded
-                    according to these rules look better on different browsers and devices, load faster, are more
-                    accessible, and are easier to find by search engines.
-
-                    W3C Validator checks the HTML and XHTML codes of web sites according to these standards and shows
-                    the
-                    errors, warnings, and suggestions. This way, web developers can correct and improve their codes. To
-                    use
-                    W3C Validator, you need to do the following:<br>
-
-                    - First, go to the [W3C Validator] page.
-                    - At the top of the page, choose one of the options "Validate by URI", "Validate by File Upload", or
-                    "Validate by Direct Input". These options determine where you will load your codes from.<br>
-                    - The "Validate by URI" option allows you to enter the address of your web site directly. This
-                    option
-                    can be used when your web site is online and accessible to the internet. <br>
-                    - The "Validate by File Upload" option allows you to upload an HTML or XHTML file that is saved on
-                    your
-                    computer. This option can be used when your web site is not yet published or inaccessible to the
-                    internet.<br>
-                    - The "Validate by Direct Input" option allows you to paste your codes directly into the text area.
-                    This
-                    option can be used when you want to test only a part or a small piece of your web site.<br>
-                    - Depending on the option you chose, enter or upload the address, file, or codes of your web site to
-                    the
-                    required area.<br>
-                    - At the bottom of the page, open the "More Options" section and select the character encoding,
-                    document
-                    type, and other settings of your codes. These settings ensure that your codes are recognized and
-                    checked
-                    correctly. If you are not sure about these settings, you can use the default values.<br>
-                    - Click the "Check" button to start checking your codes.<br>
-                    - After a few seconds, the check result page will open. On this page, you can see whether your codes
-                    are
-                    valid or not, how many errors and warnings are found, which line and column the errors are on, the
-                    reasons for the errors, and how they can be fixed. You can also see the source code, the cleaned
-                    version, the outline view, and other options of your codes.<br>
-                    - Carefully examine the errors and warnings and make the necessary changes to correct your codes.<br>
-                    After
-                    correcting, click the "Revalidate" button to check again. Repeat this process until your codes are
-                    completely valid.
-
-                    W3C Validator is a useful and reliable tool to check the compliance of web sites with the standards.
-                    Testing your codes with this tool will increase the quality and performance of your web site.
-                    Therefore,
-                    as web developers, we need to use W3C Validator regularly.
-
+                     <h2>How is Accessibility Testing Performed?</h2>
+                    Automated Accessibility Testing is an Essential Component of Ensuring Web Applications are Inclusive
+                    and Accessible for All Users, Including People with Disabilities. Automation tools are valuable for
+                    quickly identifying common accessibility issues and providing developers with a starting point for
+                    remediation.
+                    In this project, I did the accessibility test with Lighthouse in google.
+                    What is Lighthouse
+                    Lighthouse: As mentioned before, Lighthouse is an automated tool that can be run within the Chrome
+                    DevTools or as a part of various online services. It provides a comprehensive accessibility audit
+                    and suggestions for improvements.
+                     <h2>How did I use Lighthouse?</h2>
+                    I opened my code from Visual Studio Code through the choreme browser using Show Preview, then I
+                    opened the inspect section and clicked on the analyze page button through the lighthouse link and
+                    made it analyze the Home Page page, as you can see on the left side. In a very short time I saw my
+                    results on the screen, these results are our results in five categories on the screen;
+                    performance, accessibility, best practices, seo and pwa. 
+                    <h3>Performance:</h3>
+                    The performance section assesses the loading speed and responsiveness of the web page.
+                     <h3>Performance Score: 85/100</h3>
+                    The web page demonstrates a good performance overall, but there is room for improvement.
+                    <h3>Largest Contentful Paint (LCP): 2.5s </h3>
+                    LCP measures the time it takes for the main content of the page to load. The current value is
+                    acceptable, but optimizing it further can enhance user experience.
+                     <h3>First Contentful Paint (FCP): 1.2s</h3>
+                    FCP measures the time it takes for the browser to render the first piece of content. The current
+                    value is good, indicating a fast initial load.
+                     <h3>Accessibility:</h3>
+                    The accessibility section evaluates the web page's adherence to accessibility standards.
+                     <h3>Accessibility Score: 92/100</h3>
+                    The web page demonstrates strong accessibility, with few issues.
+                     <h3>Issues:</h3>
+                    Alt attributes missing on some images (3 occurrences).
+                    Ensure ARIA roles are used correctly to enhance screen reader compatibility.
+                     <h3>Best Practices:</h3>
+                    The best practices section checks for adherence to web development best practices.
+                    Best Practices Score: 88/100
+                    The web page follows most best practices but has some areas that could be improved.
+                     <h3>Issues:</h3>
+                    Use modern image formats (WebP) to reduce image file sizes and improve page loading speed.
+                    Avoid deprecated features such as document.write.
+                     <h3>SEO:</h3>
+                    The SEO section assesses how well the web page is optimized for search engines.
+                     <h3>SEO Score: 95/100</h3>
+                    The web page is well-optimized for search engines.
+                     <h3>Suggestions:</h3>
+                    Add meta descriptions to pages lacking them for better search engine result snippet generation.
+                    Utilize descriptive and concise title tags for improved search engine visibility.
+                     <h3>Progressive Web App (PWA):</h3>
+                    The Progressive Web App section evaluates the page's adherence to PWA principles.
+                     <h3>PWA Score: 75/100</h3>
+                    The web page has some PWA features but lacks certain optimizations.
+                     <h3>Suggestions:</h3>
+                    Implement a service worker to enable offline functionality.
+                    Add a web app manifest for improved user experience on mobile devices.
+                    All the tests we look at are on the screen with their values and in case of any problem, it shows us
+                    a way to solve our problem with its description and visualization.
 
                 </p>
 
             </div>
-            </div>
+        </div>
 
     </section>
     <!-- Access Section End -->
@@ -106,7 +107,7 @@
     <div class="footer">
         <div class="box-container">
             <div class="box">
-                <h3>Lorem, ipsum dolor.</h3>
+                <h2>Lorem, ipsum dolor.</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
                     sint veniam eius nostrum, explicabo similique labore nisi
@@ -114,7 +115,7 @@
                 </p>
             </div>
             <div class="box">
-                <h3>quick link</h3>
+                <h2>quick link</h2>
                 <a href="#">home</a>
                 <a href="#">study</a>
                 <a href="#">accessibility</a>
@@ -123,14 +124,14 @@
                 <a href="#">contact us</a>
             </div>
             <div class="box">
-                <h3>Follow</h3>
+                <h2>Follow</h2>
                 <a href="#">facebook</a>
                 <a href="#">instagram</a>
                 <a href="#">twitter</a>
                 <a href="#">web site</a>
             </div>
             <div class="box">
-                <h3>contact info</h3>
+                <h2>contact info</h2>
                 <div class="info">
                     <i class="fas fa-phone"></i>
                     <p>+4712345678 <br />+4798765432</p>

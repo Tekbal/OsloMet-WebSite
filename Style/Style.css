@@ -53,7 +53,7 @@ section {
   border-radius: 5rem;
   background: var(--gradient);
   font-size: 1.7rem;
-  color: #fff;
+  color: black;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
@@ -97,13 +97,6 @@ header .logo {
   color: black;
 }
 header .logo:hover{
-  color: var(--orange);
-}
-/* Logo span styles */
-header .logo span {
-  color: black;
-}
-header span:hover{
   color: var(--orange);
 }
 
@@ -157,14 +150,14 @@ header label {
 }
 
 /* Home content heading styles */
-.home .content h3 {
+.home .content h2 {
   font-size: 5.5rem;
   color: #333;
   text-transform: uppercase;
 }
 
 /* Home content heading span styles */
-.home .content h3 span {
+.home .content h2 span {
   color: var(--brown);
   text-transform: uppercase;
 }
@@ -208,7 +201,7 @@ header label {
 }
 
 /* Study section box heading styles */
-.study .box-container .box h3 {
+.study .box-container .box h2 {
   font-size: 2rem;
   color: #333;
   padding-top: 1rem;
@@ -245,7 +238,8 @@ header label {
 
 /* Styling for the image inside the box in the access section */
 .access .box-container .box img {
-  height: 50%;
+  width: 115rem;
+  height: 62rem;
   float: left;
   border-radius: 1rem;
   padding: 2rem ;
@@ -341,7 +335,7 @@ header label {
 }
 
 /* About section column content heading styles */
-.about .column .content h3 {
+.about .column .content h2 {
   font-size: 3rem;
   color: #666;
 }
@@ -383,6 +377,7 @@ header label {
 /* Contact section form styles */
 .contact form {
   flex: 1 1 40rem;
+  margin-top: 3rem;
   padding: 2rem 3rem;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -464,19 +459,22 @@ header label {
 }
 
 /* Footer box heading styles */
-.footer .box-container .box h3 {
+.footer .box-container .box h2 {
   font-size: 2.5rem;
   padding: 1rem 0;
-  color: #ff9900;
+  color: black;
   text-decoration: underline;
   text-underline-offset: 1rem;
+}
+.footer .box-container .box h2:hover{
+  color: var(--orange);
 }
 
 /* Footer box paragraph styles */
 .footer .box-container .box p {
   font-size: 1.5rem;
   padding: 2rem 0;
-  color: #ff9900;
+  color: #666 ;
 }
 
 /* Footer box link styles */
@@ -484,7 +482,7 @@ header label {
   display: block;
   font-size: 1.5rem;
   padding: 1rem 0;
-  color: #ff9900;
+  color:  #666;
 }
 
 /* Footer box link hover styles */
